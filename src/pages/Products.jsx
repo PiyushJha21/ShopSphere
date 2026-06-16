@@ -1,25 +1,25 @@
 import "../styles/Products.css";
 import ProductCard from "../components/ProductCard";
 
-function Products() {
+function Products({ addToCart }) {
   const products = [
     {
       id: 1,
       name: "Wireless Headphones",
       price: "Rs 99",
-      image: "https://via.placeholder.com/250"
+      image: "https://via.placeholder.com/250",
     },
     {
       id: 2,
       name: "Smart Watch",
       price: "Rs 149",
-      image: "https://via.placeholder.com/250"
+      image: "https://via.placeholder.com/250",
     },
     {
       id: 3,
       name: "Laptop",
       price: "Rs 899",
-      image: "https://via.placeholder.com/250"
+      image: "https://via.placeholder.com/250",
     },
   ];
 
@@ -34,6 +34,7 @@ function Products() {
             name={product.name}
             price={product.price}
             image={product.image}
+            onAddToCart={() => addToCart(product)}
           />
         ))}
       </div>
