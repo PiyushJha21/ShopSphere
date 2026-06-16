@@ -1,3 +1,5 @@
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 import { useState } from "react";
 import Navbar from "./components/Navbar";
 
@@ -23,6 +25,10 @@ function App() {
       <Products addToCart={addToCart} />
 
       <Cart cartItems={cartItems} />
+
+      <Login />
+
+      <Register />  
     </>
   );
 }
